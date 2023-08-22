@@ -1,0 +1,22 @@
+<h1 class="text-3xl">{{ section.settings.title }}</h1>
+<p class="mt-2">{{ section.settings.subtext_title }}</p>
+
+{% schema %}
+  {
+    "name": "Template 404",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "default": "404",
+        "label": "404 Heading Title"
+      }, {
+        "type": "text",
+        "id": "subtext_title",
+        "default": "The page was not found.",
+        "label": "404 Subtext Title"
+      }
+    ]
+
+  }
+{% endschema %}
