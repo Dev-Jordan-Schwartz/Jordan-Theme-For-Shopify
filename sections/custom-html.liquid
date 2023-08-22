@@ -1,0 +1,38 @@
+<!-- 'page-width' may need to be changed to 'container' or something else depending on the theme used -->
+<div class="page-width">
+  {% if section.settings.title != blank %}
+    <div class="section-header text-center">
+      <h1 class="h2">{{ section.settings.title | escape }}</h1>
+    </div>
+  {% endif %}
+
+  <div class="custom-html">
+    {{ section.settings.code }}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Custom HTML",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Custom HTML"
+      }, {
+        "type": "html",
+        "label": "Custom HTML",
+        "id": "code",
+        "label": "HTML"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom HTML",
+        "category": "Advanced layout"
+      }
+    ]
+  }
+{% endschema %}
