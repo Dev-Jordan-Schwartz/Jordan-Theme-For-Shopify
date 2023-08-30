@@ -1,9 +1,24 @@
 {
-    "name": "Template 404",
-    "sections": {
-        "template": {
-            "type": "template-404"
-        }
+  "sections": {
+    "template": {
+      "type": "template-404",
+      "settings": {
+        "title": "404",
+        "subtext_title": "The page was not found.",
+        "button_label": "Back to Homepage",
+        "button_url": ""
+      }
     },
-    "order": ["template"]
+    "bdfd66e8-fb56-4ded-9f11-b03b9997d2a3": {
+      "type": "custom-html",
+      "settings": {
+        "title": "",
+        "code": "<h1 style=\"font-size: 50px; text-align: center;\">Test Section<\/h1>"
+      }
+    }
+  },
+  "order": [
+    "template",
+    "bdfd66e8-fb56-4ded-9f11-b03b9997d2a3"
+  ]
 }
