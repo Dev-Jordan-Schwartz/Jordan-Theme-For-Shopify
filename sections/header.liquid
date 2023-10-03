@@ -1,5 +1,5 @@
 {% assign main_menu_linklist = linklists[section.settings.menu].links %}
-<div class="relative bg-white" x-data="{ mobileMenuOpen: true }">
+<div class="relative bg-white" x-data="{ mobileMenuOpen: false }">
   <div class="mx-auto px-4 sm:px-6">
     <div class="flex justify-center items-center py-6 md:justify-start md:space-x-10">
       <!-- STORE NAME / STORE LOGO -->
@@ -115,7 +115,7 @@
                   <div x-show="{{ link_handle }}"class="grid gap-y-7 py-3">
                     {% for childlink in link.links %}
 
-                      <a href="#" class="-m-3 p-3 mt-2 flex items-center rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-50">
+                      <a href="{{ childlink.url }}" class="-m-3 p-3 mt-2 flex items-center rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-50">
                         <span class="ml-3 text-base font-medium text-gray-500">{{ childlink.title }}</span>
                       </a>
 
@@ -123,7 +123,7 @@
                   </div>
                   </div>
                 {% else %}
-                  <a href="#" class="-m-3 p-3 flex items-center rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-50">
+                  <a href="{{ link.url }}" class="-m-3 p-3 flex items-center rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-50">
                     {{ link.title }}
                   </a>
                 {% endif %}
