@@ -5,8 +5,8 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
             {% for collection in collections %}
                 {% if collection.all_products_count > 0 %}
-                    <div class="border bg-white shadow-lg rounded-lg overflow-hidden"">
-                        <div class="border bg-white overflow-hidden">
+                    <div class="w-full py-6 px-3">
+                        <div class="border bg-white overflow-hidden rounded-lg shadow-lg">
                             <a href="{{ collection.url }}">
                                 <div class="h-80 overflow-hidden">
                                     {% if collection.featured_image != blank %}
@@ -16,8 +16,8 @@
                                     {% endif %}
                                     <img class="w-full h-full object-cover transition duration-1000 ease-in-out transform hover:scale-105" src="{{ collection_image | img_url: 'large' }}" alt="{{ collection.title }}">
                                 </div>
-                            <div class="p-4 bg-gray-100 border-gray-200">
-                                <h3 class="text-xl text-center">{{ collection.title }}</h3>
+                            <div class="p-4 bg-gray-100 border">
+                                <h3 class="text-xl text-center text-gray-700 font-medium">{{ collection.title }}</h3>
                             </div>
                             </a>
                         </div>
