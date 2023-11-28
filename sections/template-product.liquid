@@ -140,7 +140,7 @@
     </div>
 </div>
 
-
+        {% comment %} Bug with Variant Selector Logic, paused at 11:50 in video {% endcomment %}
 <script>
     class VariantSelector extends HTMLElement {
         constructor() {
@@ -183,6 +183,7 @@
     customElements.define("variant-selector", VariantSelector)
 </script>
 
+    {% comment %} Mobile Swiper Logic {% endcomment %}
 <script>
     const swiper = new Swiper('.swiper', {
         direction: 'horizontal',
