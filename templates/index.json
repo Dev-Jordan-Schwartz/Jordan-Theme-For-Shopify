@@ -1,11 +1,34 @@
 {
-    "sections": {
-        "featured-collection": {
-            "type": "featured-collection",
-            "settings": {
-                "featured_collection": "all"
-            }
-        }
+  "sections": {
+    "227844b3-7770-4feb-9a18-95dd2a9bcc65": {
+      "type": "custom-html",
+      "settings": {
+        "title": "",
+        "code": "<div style=\"text-align: center; font-size: 16px; max-width: 60%; margin: auto; text-align: center; padding: 20px;\">\n<h1 style=\" font-size: 40px;\">Artisanal Cookies for Sale - Cookie Owl: Your Premier Online Cookie Shop<\/h1>\n<p>Welcome to Cookie Owl, your enchanting haven for all things cookie! Immerse yourself in a world where each delightful bite is a journey of sweetness and joy. At Cookie Owl, we craft more than just cookies; we create moments of indulgence. Our handpicked selection of artisanal cookies, made with the finest ingredients, promises to tantalize your taste buds and elevate your cookie experience. Whether you crave classic chocolate chip perfection, daring flavor fusions, or exquisite cookie creations, Cookie Owl has something to satisfy every cookie connoisseur. Explore our delectable assortment and embark on a delicious adventure. Join us in celebrating the art of baking and the magic of sharing, because at Cookie Owl, every cookie tells a story. Indulge yourself; you deserve it!<\/p>\n<br>\n<p>Indulge in the irresistible allure of Cookie Owl, where passion meets perfection in every delectable bite. At our online cookie emporium, we pride ourselves on delivering a symphony of flavors crafted with the finest ingredients. From classic favorites like chewy chocolate chip to innovative creations that push the boundaries of cookie artistry, our collection is a testament to the sweet pleasures of life. Each cookie is a masterpiece, baked to perfection and packaged with care, awaiting its moment to delight your senses. Join us on a journey of taste and texture, where every click leads to a world of sweetness. At Cookie Owl, we're not just selling cookies; we're curating moments of joy, one delicious order at a time. Explore our tempting array of treats and elevate your cookie experience with us<\/p>\n<\/div>"
+      }
     },
-    "order": ["featured-collection"]
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured Collection",
+        "featured_collection": "all",
+        "number_of_products_to_show": 4
+      }
+    },
+    "66a7ece6-0042-4b39-a0ef-f34548b5932a": {
+      "type": "contact-form",
+      "custom_css": [
+        "h1 {text-align: center; font-size: 35px;}",
+        "form {margin-bottom: 75px;}"
+      ],
+      "settings": {
+        "title": "Contact Us"
+      }
+    }
+  },
+  "order": [
+    "227844b3-7770-4feb-9a18-95dd2a9bcc65",
+    "featured-collection",
+    "66a7ece6-0042-4b39-a0ef-f34548b5932a"
+  ]
 }
