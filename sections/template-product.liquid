@@ -73,7 +73,7 @@
                         {% comment %} Product Variant Selector Logic {% endcomment %}
                         <div class="my-3">
                             {% unless product.has_only_default_variant %}
-                                <div data-url="{{ product.url }}" data-section="{{ section.id }}">
+                                <variant-selector data-url="{{ product.url }}" data-section="{{ section.id }}">
                                     {% for option in product.options_with_values %}
                                         <label for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
                                         <div class="my-2">
@@ -94,8 +94,12 @@
                                             {% endfor %}
                                             </select>
                                         </div>
+                                        <script type="application/json">
+                                            {{ product.variants | json }}
+                                        </script>
+
                                     {% endfor %}
-                                </div>
+                                </variant-selector>
                             {% endunless %}
                         </div>
 
@@ -128,6 +132,7 @@
                             </button>
                         </div>
                         {% else %}
+
                     {% endcase %}
                 {% endfor %}
            {% endform %}
@@ -135,6 +140,48 @@
     </div>
 </div>
 
+
+<script>
+    class VariantSelector extends HTMLElement {
+        constructor() {
+            super();
+            this.addEventListener("change", this.onVariantChange);
+        }
+
+        onVariantChange() {
+           this.getSelectedOptions();
+           this.getSelectedVariant();
+        }
+
+        getSelectedOptions() {
+           this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
+           console.log(this.options)
+        }
+
+        getVariantJSON() {
+            this.variantData = this.variantData || JSON.parse(this.querySelector('[type="application/json"]').textContent);
+            console.log(this.variantData)
+            return this.variantData
+        }
+
+        getSelectedVariant() {
+           this.currentVariant = this.getVariantJSON().find(
+            (variant) => {
+                const findings = !variant.options.map(
+                    (option, index) => {
+                        return this.options[index] === option;
+                    }
+                ).includes(false);
+
+                if(findings) return variant;
+            }
+        );
+
+           console.log(this.currentVariant);
+        }
+    }
+    customElements.define("variant-selector", VariantSelector)
+</script>
 
 <script>
     const swiper = new Swiper('.swiper', {
