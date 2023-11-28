@@ -7,11 +7,6 @@
           "mobile_menu_title": "Cookie Owl",
           "menu": "main-menu"
         }
-      },
-      "homepage": {
-        "type": "homepage",
-        "settings": {
-        }
       }
     },
     "content_for_index": [
