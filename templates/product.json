@@ -1,26 +1,52 @@
 {
-    "sections": {
-        "template": {
-            "type": "template-product",
-            "blocks": {
-                "vendor": {"type": "vendor" },
-                "title": {"type": "title" },
-                "pricee": {"type": "price" },
-                "variant_selector": {"type": "variant_selector" },
-                "quantity": {"type": "quantity" },
-                "description": {"type": "description" },
-                "checkout_buttons": {"type": "checkout_buttons" }
-            },
-            "block_order": [
-                "vendor",
-                "title",
-                "price",
-                "variant_selector",
-                "quantity",
-                "description",
-                "checkout_buttons"
-            ]
+  "sections": {
+    "template": {
+      "type": "template-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "settings": {
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "variant_selector": {
+          "type": "variant_selector",
+          "settings": {
+          }
+        },
+        "quantity": {
+          "type": "quantity",
+          "settings": {
+          }
+        },
+        "checkout_buttons": {
+          "type": "checkout_buttons",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
         }
-    },
-    "order": ["template"]
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "variant_selector",
+        "quantity",
+        "checkout_buttons",
+        "description"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "template"
+  ]
 }
