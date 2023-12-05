@@ -826,6 +826,10 @@ video {
   width: 100vw;
 }
 
+.w-80 {
+  width: 20rem;
+}
+
 .max-w-4xl {
   max-width: 56rem;
 }
@@ -1010,6 +1014,10 @@ video {
 
 .border {
   border-width: 1px;
+}
+
+.border-none {
+  border-style: none;
 }
 
 .border-gray-600 {
