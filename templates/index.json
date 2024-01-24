@@ -1,5 +1,13 @@
 {
   "sections": {
+    "custom_hero_KzVgqP": {
+      "type": "custom-hero",
+      "settings": {
+        "title": "Welcome to Cookie Owl",
+        "description": "Explore Owlicious Treats",
+        "image": "shopify:\/\/shop_images\/georgie-cobbs-bKjHgo_Lbpo-unsplash.jpg"
+      }
+    },
     "227844b3-7770-4feb-9a18-95dd2a9bcc65": {
       "type": "custom-html",
       "settings": {
@@ -27,6 +35,7 @@
     }
   },
   "order": [
+    "custom_hero_KzVgqP",
     "227844b3-7770-4feb-9a18-95dd2a9bcc65",
     "featured-collection",
     "66a7ece6-0042-4b39-a0ef-f34548b5932a"

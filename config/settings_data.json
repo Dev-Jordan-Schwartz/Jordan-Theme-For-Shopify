@@ -16,5 +16,10 @@
   "presets": {
     "Default": {
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+
+    ]
   }
 }
