@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{ 'hero.css' | asset_url }}">
   <div class="hero-container">
-    <div class="hero-text">
+    <div style="background-image:url('{{ section.settings.image | image_url }}');" class="hero-text">
       <h1>{{ section.settings.title }}</h1>
       <p>{{ section.settings.description }}</p>
     </div>
